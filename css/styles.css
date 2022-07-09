@@ -40,9 +40,33 @@ body{
     visibility: hidden;
 }
 
+/* Remove standart decoration for links */
 .link{
     text-decoration: none;
     color: currentColor;
+}
+
+/* Global reset */
+h1, 
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p,
+a{
+    padding: 0;
+    margin: 0;
+}
+
+/* Conteiner for elements */
+.container{
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* 
@@ -51,8 +75,22 @@ body{
 ************************  
 */
 
+/* Navigation panel */
+.main-panel{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-panel{
+    display: flex;
+    align-items: center;
+}
+
 /* Logo */
-.logo{    
+.logo{   
+    padding-top: 24px;
+    padding-bottom: 25px;
+    
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 26px;
@@ -78,8 +116,21 @@ body{
 }
 
 .site-nav{
+    display: flex;
+    margin-left: 93px;
+    gap: 50px;
+
+
+
     color: var(--gray-black-text); 
 }
+
+.site-nav .link{
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
 
 .site-nav .link.current,
 .site-nav .link:hover,
@@ -91,7 +142,16 @@ body{
 
 /* Header - contacts */
 .contact{
+    display: flex;
+    gap: 50px;
+    align-self: center;
+
     color: var(--grey-text);    
+}
+
+.site-nav-link{
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 /* Footer */
@@ -146,6 +206,8 @@ body{
 }
 
 .hero-title{
+    padding-top: 200px;
+
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
