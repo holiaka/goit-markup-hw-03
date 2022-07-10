@@ -14,41 +14,49 @@
     />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
+
+  
   <!--Body of HTML-->
   <body>
-    <!--Top parts: logo, navigation and so on -->
+
+     <!--Top parts: logo, navigation and so on -->
     <header class="header-links">
+        <div class="container full-header-panel">
+                
+            <!--Navigation panel-->
+            <nav class="nav-panel">
+                
+                <!--Logo text and link-->
+                <a class="logo" href=./index.html lang="en">Web<span class="black-color-logo">Studio</span></a>
 
-        <!--Navigation panel-->
-        <nav>
-            <!--Logo text and link-->
-            <a class="logo" href=./index.html lang="en">Web<span class="black-color-logo">Studio</span></a>
+                <!--Site naviagation list-->
+                <ul class="site-nav list">
+                    <li>
+                        <a class="link current" href="./index.html">Студия</a>
+                    </li>
+                    <li>
+                        <a class="link" href="./portfolio.html">Портфолио</a>
+                    </li>
+                    <li>
+                        <a class="link" href="">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
 
-            <!--Site naviagation list-->
-            <ul class="site-nav list">
+            <ul class="contact list">
                 <li>
-                    <a class="link" href="./index.html">Студия</a>
+                <!--Contact e-mail-->
+                <a class="link site-nav-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
                 </li>
                 <li>
-                    <a class="link current" href="./portfolio.html">Портфолио</a>
-                </li>
-                <li>
-                    <a class="link" href="">Контакты</a>
+                <!--Contact mob. tel.-->
+                <a class="link site-nav-link" href="tel:+380961111111">+38 096 111 11 11</a>
                 </li>
             </ul>
-        </nav>
 
-        <ul class="contact list">
-            <li>
-            <!--Contact e-mail-->
-            <a class="link site-nav-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
-            </li>
-            <li>
-            <!--Contact mob. tel.-->
-            <a class="link site-nav-link" href="tel:+380961111111">+38 096 111 11 11</a>
-            </li>
-        </ul>
+        </div>
 
+        
     </header>
 
     <!--Portfolio parts-->
@@ -136,23 +144,27 @@
 
     <!--Footer part-->
     <footer class="footer">
-        <!--Logo text and link-->
-        <a class="logo" href=./index.html lang="en">Web<span class="white-text-logo">Studio</span></a>
-        <!--Address and develotment contacts-->
-        <address class="footer-address">
-            <ul class="list dev-data">
-                <li>
-                    <a class="dev-adrress link" href="https://goo.gl/maps/GUnd78wBxHpprMvDA" target="_blank" rel="noreferrer noopener">г. Киев, пр-т Леси Украинки, 26</a>
-                </li>
-                <li>
-                    <a class="dev-contact link" href="mailto:info@example.com">info@example.com</a>
-                </li>
-                <li>
-                    <a class="dev-contact link" href="tel:+380991111111">+38 099 111 11 11</a>
-                </li>
-            </ul>  
-        </address>
+        <div class="container">
+            <!--Logo text and link-->
+            <a class="logo footer-logo" href=./index.html lang="en">Web<span class="white-text-logo">Studio</span></a>
+            <!--Address and develotment contacts-->
+            <address class="footer-address">
+                <ul class="list dev-data">
+                    <li class="dev-data-item">
+                        <a class="dev-adrress link" href="https://goo.gl/maps/GUnd78wBxHpprMvDA" target="_blank" rel="noreferrer noopener">г. Киев, пр-т Леси Украинки, 26</a>
+                    </li>
+                    <li class="dev-data-item">
+                        <a class="dev-contact link" href="mailto:info@example.com">info@example.com</a>
+                    </li>
+                    <li class="dev-data-item">
+                        <a class="dev-contact link" href="tel:+380991111111">+38 099 111 11 11</a>
+                    </li>
+                </ul>  
+            </address>
+
+        </div>
 
     </footer>
+
   </body>
 </html>

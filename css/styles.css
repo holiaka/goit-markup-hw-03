@@ -19,6 +19,9 @@
     /* Backgrounds colors */
     --black-color-background: #2F303A;
     --gray-background: #F5F4FA;
+    
+    /* Line color */
+    --ligth-gray-line: #ECECEC;
 }
 
 /* Standard features */
@@ -55,7 +58,8 @@ h5,
 h6,
 ul,
 p,
-a{
+a,
+address{
     padding: 0;
     margin: 0;
 }
@@ -69,6 +73,21 @@ a{
     margin-right: auto;
 }
 
+/* Hide element */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 /* 
 ************************
 * Class styles
@@ -76,9 +95,10 @@ a{
 */
 
 /* Navigation panel */
-.main-panel{
+.full-header-panel{
     display: flex;
-    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .nav-panel{
@@ -113,6 +133,8 @@ a{
     font-weight: 500;   
     line-height: 1.14;
     letter-spacing: 0.02em;
+
+    border-bottom: 1px solid var(--ligth-gray-line);
 }
 
 .site-nav{
@@ -146,6 +168,9 @@ a{
     gap: 50px;
     align-self: center;
 
+    margin-left: auto;
+
+
     color: var(--grey-text);    
 }
 
@@ -156,6 +181,10 @@ a{
 
 /* Footer */
 .footer{
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+
     background-color: var(--black-color-background);
 }
 
@@ -168,12 +197,29 @@ a{
     color: var(--blue-color);
 }
 
+.footer-logo{
+    display: inline-block;
+
+    margin-bottom: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 .footer-address{
     font-style: normal;
 }
 
 /* .dev-data{    
 } */
+
+.dev-data-item{
+    display: block;
+    margin-bottom: 9px;
+}
+
+.dev-data-item:last-child{
+    margin-bottom: 0;
+}
 
 .dev-adrress{
     color: var(--full-white-text);
@@ -202,12 +248,21 @@ a{
 /* ***Main sections*** */
 /* Hero section */
 .hero{
-    background-color: var(--black-color-background)
+    background-color: var(--black-color-background);
+    padding-top: 200px;
+    padding-bottom: 200px;
+    
 }
 
-.hero-title{
-    padding-top: 200px;
+/* .hero-content{} */
 
+
+.hero-title{
+    max-width: 696px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -218,6 +273,17 @@ a{
 }
 
 .order-button{
+    min-width: 200px;
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-right: 32px;
+    padding-bottom: 10px;
+    padding-left: 32px;
+    
+
+
     font-family: 'Roboto';
     font-weight: 700;
     font-size: 16px;
@@ -240,10 +306,23 @@ a{
 }
 
 /* Benefit section */
-/* .benefit{
-} */
+.benefit{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.benefit-list{
+    display: flex;
+    gap: 30px;    
+}
+
+.benefit-item{
+    max-width: 270px;
+}
 
 .benefit-title{
+    margin-bottom: 10px;
+
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -255,19 +334,60 @@ a{
 } */
 
 /* Work list and team sections*/
-/* .work{
-} */
+.work{
+    padding-bottom: 94px;
+}
+
+.work-img-content{
+    display: flex;
+    gap: 30px;
+}
+
+.img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 
 .team{
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+
     background-color: var(--gray-background);
 }
 
 .section-title{
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 50px;
+
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
     color: var(--gray-black-text);
+}
+
+.team-list{
+    display: flex;
+    gap: 30px;
+}
+
+.team-content{
+    max-width: 270;
+    
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.team-text{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    
+    background-color: var(--full-white-text);
+    
 }
 
 .team-name,
@@ -278,6 +398,8 @@ a{
 }
 
 .team-name{
+    margin-bottom: 10px;
+
     font-weight: 500;
     color: var(--gray-black-text);
 }
