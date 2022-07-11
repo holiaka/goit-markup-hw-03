@@ -160,7 +160,6 @@ img {
 
 /* Header - navigator */
 
-
 .site-nav{
     display: flex;
     margin-left: 93px;
@@ -194,7 +193,6 @@ img {
 
     margin-left: auto;
 
-
     color: var(--grey-text);    
 }
 
@@ -207,7 +205,6 @@ img {
 .footer{
     padding-top: 60px;
     padding-bottom: 60px;
-
 
     background-color: var(--black-color-background);
 }
@@ -274,8 +271,7 @@ img {
 .hero{
     background-color: var(--black-color-background);
     padding-top: 200px;
-    padding-bottom: 200px;
-    
+    padding-bottom: 200px;    
 }
 
 /* .hero-content{} */
@@ -390,8 +386,7 @@ img {
     padding-bottom: 30px;
     text-align: center;
     
-    background-color: var(--full-white-text);
-    
+    background-color: var(--full-white-text);    
 }
 
 .team-name,
@@ -425,7 +420,6 @@ img {
     justify-content: center;
     gap: 8px;
     margin-bottom: 50px;
-
 }
 
 
