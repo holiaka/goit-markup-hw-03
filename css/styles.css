@@ -22,6 +22,18 @@
     
     /* Line color */
     --ligth-gray-line: #ECECEC;
+
+    /* Border line color */
+    --gray-border-line: #EEEEEE;
+
+    /* Angle radius */
+    --radius: 4px;
+
+    /* Card gap`s distance */
+    --card-gap: 30px;
+
+    /* Number of cards in a row */
+    --card-numbers: 3;
 }
 
 /* Standard features */
@@ -87,6 +99,23 @@ address{
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+/* Images parameters */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Features and calculation of "flex-containers" contents */
+.card-set{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--card-gap);
+}
+
+.card-item{
+    flex-basis: calc((100% - (var(--card-numbers) - 1) * var(--card-gap)) / var(--card-numbers));
+}
 
 /* 
 ************************
@@ -95,6 +124,7 @@ address{
 */
 
 /* Navigation panel */
+
 .full-header-panel{
     display: flex;
     margin-left: auto;
@@ -129,13 +159,7 @@ address{
 }
 
 /* Header - navigator */
-.header-links{
-    font-weight: 500;   
-    line-height: 1.14;
-    letter-spacing: 0.02em;
 
-    border-bottom: 1px solid var(--ligth-gray-line);
-}
 
 .site-nav{
     display: flex;
@@ -274,15 +298,13 @@ address{
 
 .order-button{
     min-width: 200px;
-    border-radius: 4px;
+    border-radius: var(--radius);
     margin-left: auto;
     margin-right: auto;
     padding-top: 10px;
     padding-right: 32px;
     padding-bottom: 10px;
     padding-left: 32px;
-    
-
 
     font-family: 'Roboto';
     font-weight: 700;
@@ -311,16 +333,11 @@ address{
     padding-bottom: 94px;
 }
 
-.benefit-list{
-    display: flex;
-    gap: 30px;    
+.benefit-list .card-item{
+    --card-numbers: 4;
 }
 
-.benefit-item{
-    max-width: 270px;
-}
-
-.benefit-title{
+.benefit-title {
     margin-bottom: 10px;
 
     font-weight: 700;
@@ -338,21 +355,9 @@ address{
     padding-bottom: 94px;
 }
 
-.work-img-content{
-    display: flex;
-    gap: 30px;
-}
-
-.img{
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
 .team{
     padding-top: 94px;
     padding-bottom: 94px;
-
 
     background-color: var(--gray-background);
 }
@@ -369,16 +374,15 @@ address{
     color: var(--gray-black-text);
 }
 
-.team-list{
-    display: flex;
-    gap: 30px;
-}
-
 .team-content{
-    max-width: 270;
+    min-width: 270px;
     
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+}
+
+.team-list .card-item{
+    --card-numbers: 4;
 }
 
 .team-text{
@@ -410,11 +414,30 @@ address{
 ************************  
 */
 
-/* .portfolio{
-} */
+.portfolio{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+/* Colection parameters for filter bottons of Portfolio page */
+.filter-bottons{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 50px;
+
+}
+
 
 /* Filtration buttons for portfolio */
 .portfolio-buttons{
+    padding-top: 6px;
+    padding-right: 22px;
+    padding-bottom: 6px;
+    padding-left: 22px;
+    border-radius: var(--radius);
+    border-color: transparent;
+    
     font-family: inherit;
     font-size: 16px;
     font-weight: 500;
@@ -438,16 +461,26 @@ address{
 }
 
 /* Portfolio list */
-/* .portfolio-list{
-} */
+/* .portfolio-list{} */
 
-/* .portfolio-item{
-} */
+/* .portfolio-item{} */
 
-/* .portfolio-link{
-} */
+/* .portfolio-link{} */
+
+.portfolio-text{
+    padding-top: 20px;
+    padding-right: 24px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+
+    border-right: 1px solid var(--gray-border-line);
+    border-bottom: 1px solid var(--gray-border-line);
+    border-left: 1px solid var(--gray-border-line);
+}
 
 .portfolio-title{
+    margin-bottom: 4px;
+
     font-weight: 700;
     font-size: 18px;
     line-height: 2.0;
