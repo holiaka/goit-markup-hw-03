@@ -233,7 +233,7 @@ img {
 /* .dev-data{    
 } */
 
-.dev-data-item:not(last-child){
+.dev-data-item:not(:last-child){
     display: block;
     margin-bottom: 9px;
 }
